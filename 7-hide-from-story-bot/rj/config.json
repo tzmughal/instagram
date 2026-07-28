@@ -1,0 +1,30 @@
+{
+    "downloads_folder": "C:/Users/tzmughal/Downloads",
+    "dev_dir": ".",
+    "extracted_zips_dir": "data/extracted-zips",
+    "dump_dir": "data/dump",
+    "html_to_txt_dir": "1-HTML-to-TXT",
+    "fake_by_username_dir": "2-fake-by-username",
+    "not_following_back_dir": "3-not-following-back",
+    "block_bot_dir": "4-block-bot",
+    "unfollow_bot_dir": "5-unfollow-bot",
+    "chromedriver_dir": "data/chromedriver-win64",
+    "followers_html_dir": "1-HTML-to-TXT/Followers HTML",
+    "following_html_dir": "1-HTML-to-TXT/Following HTML",
+    "not_following_back_output_folder": "3-not-following-back/data/not following back",
+    "html_data_dir": "1-HTML-to-TXT/data",
+    "fake_suspicious_folder": "2-fake-by-username/data/suspicious",
+    "webdriver_path": "data/chromedriver-win64/chromedriver.exe",
+
+    "cookies": {
+        "csrftoken": "fL7ukswZ1USwbCnSTPwd4KF0h9lT20KC",
+        "datr": "L_lUatWeqZH855GBwZ0aJjol",
+        "dpr": "1.25",
+        "ds_user_id": "222959045",
+        "ig_did": "E427AEE3-D53A-470E-BDEB-8E808E692FA3",
+        "mid": "alT5LwALAAHP-nE1oYnNUrZWY7t1",
+        "rur": "MWG%2C17841401411353483%2C1785175610%3A01ffdf162ceb1635ecf619ca966094c5846796b6308e58a4c832a523e5bada1a6b39a92a",
+        "sessionid": "222959045%3AN3RJBMmUAhovDm%3A0%3AAYjTWTbThGDMrkxIvE8zW1mZBc6aCA90iYH8rIvh6Q",
+        "wd": "982x730"
+    }
+}

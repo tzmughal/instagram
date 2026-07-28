@@ -1,0 +1,21 @@
+{
+    "downloads_folder": "C:/Users/tzmughal/Downloads",
+    "dev_dir": ".",
+    "extracted_zips_dir": "data/extracted-zips",
+    "dump_dir": "data/dump",
+    "html_to_txt_dir": "1-HTML-to-TXT",
+    "fake_by_username_dir": "2-fake-by-username",
+    "not_following_back_dir": "3-not-following-back",
+    "block_bot_dir": "4-block-bot",
+    "unfollow_bot_dir": "5-unfollow-bot",
+    "chromedriver_dir": "data/chromedriver-win64",
+    "followers_html_dir": "1-HTML-to-TXT/Followers HTML",
+    "following_html_dir": "1-HTML-to-TXT/Following HTML",
+    "not_following_back_output_folder": "3-not-following-back/data/not following back",
+    "html_data_dir": "1-HTML-to-TXT/data",
+    "fake_suspicious_folder": "2-fake-by-username/data/suspicious",
+    "webdriver_path": "data/chromedriver-win64/chromedriver.exe"
+}
+
+
+ 
