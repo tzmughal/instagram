@@ -1,5 +1,5 @@
 {
-    "downloads_folder": "C:/Users/tzmughal/Downloads",
+    "downloads_folder": "X:\\Downloads",
     "dev_dir": ".",
     "extracted_zips_dir": "data/extracted-zips",
     "dump_dir": "data/dump",
@@ -16,16 +16,16 @@
     "fake_suspicious_folder": "2-fake-by-username/data/suspicious",
     "webdriver_path": "data/chromedriver-win64/chromedriver.exe",
     "cookies": {
-        "csrftoken": "BtK3cYLpy6hZTR6hAZwQpt",
-        "datr": "pyVMaqrVj-KYrQGWYrnD_dtf",
+        "csrftoken": "9xviYV9o_k6f3yRYyGr56b",
+        "datr": "eJNwak9kkC3IWVj0JF-T5jW0",
         "dpr": "1.25",
         "ds_user_id": "22696138879",
-        "ig_did": "789F8CCA-94D6-4751-A65E-85318EE2BE21",
-        "mid": "akwlpwALAAFFSHk5OoqQ1bUg7IRr",
+        "ig_did": "1617657D-5748-4E64-9DE5-BFB425AC4C97",
+        "mid": "anCTeAALAAFdDHh6iCMw2n2Mdazu",
         "ps_l": "1",
         "ps_n": "1",
-        "rur": "\"RVA\\05422696138879\\0541814917421:01ffe6dd82851b8fbcd617b2cde6d315d9bff17b26b4892fb05b144559a4d590a20c3570\"",
-        "sessionid": "22696138879%3AqDJRM1Z59qzUDU%3A18%3AAYgA7pYhfWZlDFmbJwfAYB0mLITTLmGDJYMseihi4A",
-        "wd": "982x730"
+        "rur": "NHA%2C17841422646387017%2C1786976883%3A01ff30edb247860a39feca77213973473c4190a9f879297e3967a47e0992550651de62b3",
+        "sessionid": "22696138879%3AShcJaXfJDnAwqy%3A29%3AAYiI06DDYda0XpDp-ypZnVqjMopq1SNikBmONVveSw",
+        "wd": "982x706"
     }
 }

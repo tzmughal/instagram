@@ -254,8 +254,8 @@ def copy_for_unfollow_bot(username, nb_output_file):
     try:
         with open(unfollow_script_path, 'r') as file:
             content = file.read()
-        old_string = "usernames_path = os.path.join(SCRIPT_DIR, 'a.txt')"
-        new_string = f"usernames_path = os.path.join(SCRIPT_DIR, '{new_nb_filename}')"
+        old_string = 'USERNAMES_FILENAME = "a.txt"'
+        new_string = f'USERNAMES_FILENAME = "{new_nb_filename}"'
         new_content = content.replace(old_string, new_string)
         with open(unfollow_script_path, 'w') as file:
             file.write(new_content)

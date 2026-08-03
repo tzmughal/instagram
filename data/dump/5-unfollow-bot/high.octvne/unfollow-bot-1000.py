@@ -17,14 +17,13 @@ if PROJECT_ROOT not in sys.path:
 
 from instagram_common import load_cookies_from_config
 
-# Configure logging
 logging.basicConfig(
     filename=os.path.join(SCRIPT_DIR, 'instagram_unfollow_log.txt'),
-    level=logging.INFO, 
+    level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-# Load configuration from config.json to get the WebDriver path
+
 def load_config():
     config_path = os.path.join(SCRIPT_DIR, "config.json")
     if not os.path.exists(config_path):
@@ -35,6 +34,7 @@ def load_config():
     except Exception as e:
         print(f"Error loading configuration file: {e}")
         exit(1)
+
 
 config = load_config()
 webdriver_path = config.get("webdriver_path")
@@ -49,13 +49,11 @@ cookies = load_cookies_from_config(cookie_config_path)
 if not cookies:
     raise RuntimeError("No cookies were found in config.json. Add a 'cookies' object or paste cookie data first.")
 
-# Initialize Chrome options
 chrome_options = Options()
 chrome_options.add_argument("--disable-infobars")
 chrome_options.add_argument("--disable-extensions")
 chrome_options.add_argument("--start-maximized")
 
-# Initialize the WebDriver using Selenium Manager first, then fall back to the configured path.
 try:
     service = Service()
     driver = webdriver.Chrome(service=service, options=chrome_options)
@@ -66,16 +64,13 @@ except Exception as first_error:
     else:
         raise RuntimeError(f"Failed to start Chrome browser: {first_error}") from first_error
 
-# WebDriverWait configuration
 wait = WebDriverWait(driver, 5)
 
 try:
-    # Open Instagram
     logging.info("Opening Instagram...")
     driver.get('https://www.instagram.com/')
     wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "body")))
 
-    # Add cookies
     logging.info("Adding cookies...")
     for cookie_name, cookie_value in cookies.items():
         driver.add_cookie({'name': cookie_name, 'value': cookie_value})
@@ -84,15 +79,13 @@ try:
     driver.refresh()
     wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "body")))
 
-    # Read usernames from file (the list of accounts you are following that you want to unfollow)
     usernames_path = os.path.join(SCRIPT_DIR, 'not_following_back-high.octvne.txt')
     with open(usernames_path, 'r') as file:
         usernames = file.read().splitlines()
 
-    count = 0  # Counter for processed users
-
+    count = 0
     for username in usernames:
-        if count >= 1000:  # Stop processing after 1000 users
+        if count >= 1000:
             logging.info("Reached 1000 accounts. Ending script.")
             break
 
@@ -102,32 +95,23 @@ try:
         wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "body")))
 
         try:
-            # Check if you are following the user by looking for the "Following" element
             unfollow_status = wait.until(EC.presence_of_element_located((By.XPATH, '//div[text()="Following"]')))
             if unfollow_status:
                 logging.info(f"You are following {username}. Proceeding to unfollow...")
-
-                # Click the "Following" button to trigger the unfollow dialog
                 unfollow_status.click()
-
-                # Wait for the unfollow confirmation dialog and click "Unfollow"
                 logging.info("Confirming unfollow...")
                 confirm_button = wait.until(EC.element_to_be_clickable((
                     By.XPATH, '//div[contains(@class, "x9f619")]//span[text()="Unfollow"]'
                 )))
                 confirm_button.click()
-
                 logging.info(f"Unfollowed user: {username}")
-
         except Exception as e:
             logging.error(f"Error processing {username}. Skipping unfollow. {e}")
 
-        count += 1  # Increment the counter
-
-        # Wait for 5 minutes after every 500 users processed
+        count += 1
         if count > 0 and count % 500 == 0:
             logging.info(f"Processed {count} users. Waiting for 5 minutes...")
-            time.sleep(300)  # Wait for 300 seconds (5 minutes)
+            time.sleep(300)
 
 finally:
     logging.info("Closing the browser...")
