@@ -23,7 +23,7 @@ sessionid\t60002686137%3AE1CM5zeruXJdDM%3A3%3AAYiNb3MDOg2cq7nbPxWD57VF5uoIXxIOlc
             with open(config_path, "w", encoding="utf-8") as handle:
                 json.dump({"webdriver_path": "chromedriver.exe", "existing": True}, handle)
 
-            save_cookies_to_config(config_path, {"csrftoken": "abc"})
+            save_cookies_to_config(config_path, {"csrftoken": "YOUR_CSRF_TOKEN"})
 
             with open(config_path, "r", encoding="utf-8") as handle:
                 saved = json.load(handle)

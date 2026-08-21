@@ -50,16 +50,16 @@ wait = WebDriverWait(driver, 10)
 
 # Define your cookies (hard-coded for now)
 cookies = {
-    'csrftoken': 'DQyRdKgHEW728qr5YitmRmKW5Dx9NTzR',
+    'csrftoken": "YOUR_CSRF_TOKEN",
     'datr': '_b88aTaGhhYILPAFvA9WN-2l',
     'dpr': '1.5',
-    'ds_user_id': '38060280664',
+    'ds_user_id": "YOUR_USER_ID",
     'ig_did': 'DDDA2325-7042-4C2F-86F1-BEDD3DD6E4A4',
     'mid': 'aTy__gALAAGAN8Cjant3McTYAZEP',
     'ps_l': '1',
     'ps_n': '1',
     'rur': '"EAG\\05438060280664\\0541797181099:01feaf9ac2aa3a2cdc3ab89dc62f92757033f1a79b14bf7349f4bdc12ecaffbc7120672a"',
-    'sessionid': '38060280664%3Aze74x9egP4AYro%3A22%3AAYiUgNU2KeXoB2cWdyopipXugMAsj2MJuFvo4PTOJA',
+    'sessionid": "YOUR_SESSION_ID",
     'wd': '717x588'
 }
 

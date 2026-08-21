@@ -15,16 +15,15 @@
     "html_data_dir": "1-HTML-to-TXT/data",
     "fake_suspicious_folder": "2-fake-by-username/data/suspicious",
     "webdriver_path": "data/chromedriver-win64/chromedriver.exe",
-
     "cookies": {
-        "csrftoken": "fL7ukswZ1USwbCnSTPwd4KF0h9lT20KC",
-        "datr": "L_lUatWeqZH855GBwZ0aJjol",
-        "dpr": "1.25",
-        "ds_user_id": "222959045",
-        "ig_did": "E427AEE3-D53A-470E-BDEB-8E808E692FA3",
-        "mid": "alT5LwALAAHP-nE1oYnNUrZWY7t1",
-        "rur": "MWG%2C17841401411353483%2C1785175610%3A01ffdf162ceb1635ecf619ca966094c5846796b6308e58a4c832a523e5bada1a6b39a92a",
-        "sessionid": "222959045%3AN3RJBMmUAhovDm%3A0%3AAYjTWTbThGDMrkxIvE8zW1mZBc6aCA90iYH8rIvh6Q",
-        "wd": "982x730"
+        "csrftoken": "YOUR_CSRF_TOKEN",
+        "datr": "YOUR_DATR_TOKEN",
+        "dpr": "1.0",
+        "ds_user_id": "YOUR_USER_ID",
+        "ig_did": "YOUR_IG_DID",
+        "mid": "YOUR_MID",
+        "rur": "YOUR_RUR",
+        "sessionid": "YOUR_SESSION_ID",
+        "wd": "1920x1080"
     }
 }

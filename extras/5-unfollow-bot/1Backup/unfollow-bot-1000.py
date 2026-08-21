@@ -39,15 +39,15 @@ if not os.path.isabs(webdriver_path):
 
 # Define your cookies (hard-coded for now)
 cookies = {
-    'csrftoken': 'pypsllVa3avSDoU2uCyYmJICUcDmLThk',
+    'csrftoken": "YOUR_CSRF_TOKEN",
     'datr': 'oCloZ7KqR9j-E9dZrGFANv9j',
     'dpr': '1.5',
-    'ds_user_id': '53540114923',
+    'ds_user_id": "YOUR_USER_ID",
     'ig_did': '8E19E03E-6B47-4820-9036-7E5A716BF635',
     'ig_nrcb': '1',
     'mid': 'Z2gpoAALAAHZ6XgtvVvhbEadJJXh',
     'rur': '"LDC\\05453540114923\\0541766416136:01f737b7e722fbf818d6aac2e25e7705b44e8eb0ad16dfbaae11b528f5052038f39639ec"',
-    'sessionid': '53540114923%3AgEEAl7YpBE7xmf%3A4%3AAYdXNAADY18MTcCFVjbUmsyCctj2D6iOJFpO5uTs9g',
+    'sessionid": "YOUR_SESSION_ID",
     'wd': '721x594'
 }
 
