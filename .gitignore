@@ -6,7 +6,17 @@ __pycache__/
 .DS_Store
 .vscode/
 .idea/
+
+# Cookie & Session Protection (Never push cookies to GitHub)
+*cookie*
+*cookie*.json
+*session*
+*session*.json
+*.cookie
+*.cookies
+cookies/
+sessions/
+config.local.json
+config.cookies.json
 *.log
 *log.txt
-cookies*.json
-session*.json
